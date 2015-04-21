@@ -3,7 +3,7 @@ build:
   steps:
     - arjen/hugo-build:
         version: 0.12
-        theme: hugo-bootswatch
+        theme: cheddar
         flags: --buildDrafts=true
 deploy:
   steps:
