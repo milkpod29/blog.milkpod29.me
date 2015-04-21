@@ -1,9 +1,11 @@
 baseurl = "http://blog.milkpod29.me/"
 languageCode = "en-us"
+canonifyurls = true
 contentdir = "content"
 publishdir = "public"
 builddrafts = false
-canonifyurls = true
+theme = "cheddar"
+MetaDataFormat = "toml"
 title = "Persistence pays off."
 author = "Yuichi Saito"
 
