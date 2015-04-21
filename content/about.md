@@ -1,7 +1,7 @@
 +++
-date = "2015-04-18T01:43:51+09:00"
+date = "2015-04-02T01:43:51+09:00"
 draft = true
-title = "about"
+title = "About Persistence pays off."
 
 +++
 
