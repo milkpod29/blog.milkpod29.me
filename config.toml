@@ -6,7 +6,7 @@ publishdir = "public"
 builddrafts = false
 theme = "cheddar"
 MetaDataFormat = "toml"
-title = "Persistence pays off."
+title = "milkpod29."
 author = "Yuichi Saito"
 
 [indexes]
