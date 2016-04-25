@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yii Framework on milkpod29.</title>
+    <link>http://blog.milkpod29.me/categories/yii-framework/</link>
+    <description>Recent content in Yii Framework on milkpod29.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 May 2015 00:20:32 +0900</lastBuildDate>
+    <atom:link href="http://blog.milkpod29.me/categories/yii-framework/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My first time Codeception.</title>
+      <link>http://blog.milkpod29.me/post/codeception/20150512/</link>
+      <pubDate>Tue, 12 May 2015 00:20:32 +0900</pubDate>
+      
+      <guid>http://blog.milkpod29.me/post/codeception/20150512/</guid>
+      <description>
+
+&lt;h2 id=&#34;what-motivated-you-to-use-the-codeception:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;What motivated you to use the Codeception ?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;仕事で &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/index.html&#34;&gt;Yii Framework Version2&lt;/a&gt; を使用する機会がありまして&lt;br /&gt;
+テストコードを作成する際、標準でひな形が用意されていたのがきっかけです。&lt;br /&gt;
+&lt;a href=&#34;http://www.yiiframework.com/doc-2.0/index.html&#34;&gt;Yii Framework Version2&lt;/a&gt; についてはまた別の機会に記載します。&lt;br /&gt;
+Yii2 で用意される以下のディレクトリ構成で進めていきます。&lt;br /&gt;
+&lt;a href=&#34;https://github.com/yiisoft/yii2-app-advanced&#34;&gt;yii2-app-advanced&lt;/a&gt;&lt;br /&gt;
+console/models のクラスに対するテストケースを作っていきますよー。&lt;/p&gt;
+
+&lt;h2 id=&#34;environment-setup:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;Environment setup&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;まずは &lt;a href=&#34;http://codeception.com/&#34;&gt;codeception&lt;/a&gt; をインストールする必要があります。&lt;br /&gt;
+インストール方法は &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-test-environment-setup.html&#34;&gt;Testing environment setup&lt;/a&gt; に記載されています。&lt;br /&gt;
+そのとおりにやればOK!!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ composer global require &amp;quot;codeception/codeception=2.0.*&amp;quot;
+$ composer global require &amp;quot;codeception/specify=*&amp;quot;
+$ composer global require &amp;quot;codeception/verify=*&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;今後、codeceptコマンドを使用していきますのでパスに設定しておくと便利です。&lt;br /&gt;
+codeceptコマンドまでのパスは各自のインストール先に置き換えてください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ PATH=$PATH:/root/.composer/vendor/bin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;that-it-has-first-to-do:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;That it has first to do&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;codeceptコマンドにてテストを実行する上でまず以下のおまじないを実行する必要があります。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd tests/codeception/console
+$ codecept build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;console/unit 配下に「UnitTester」クラスが生成されテスト実行準備が整います。&lt;/p&gt;
+
+&lt;p&gt;あとは tests/config/config.php ファイルにてデータベースを指定できますので&lt;br /&gt;
+データベースを使用する際はここも書き換えるの忘れずに！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;return [
+    &#39;components&#39; =&amp;gt; [
+        &#39;db&#39; =&amp;gt; [
+            &#39;dsn&#39; =&amp;gt; &#39;mysql:host=localhost;dbname=milkpod29_tests&#39;,
+        ],
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ここは余談なんですが、既に用意されている以下のファイルたち&lt;br /&gt;
+console/unit/models/DbTestCase.php&lt;br /&gt;
+console/unit/models/TestCase.php&lt;br /&gt;
+中を見ると&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public $appConfig = &#39;@tests/codeception/config/console/config.php&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と記載されていますが config.php なんて用意されていないので以下のように変更しました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public $appConfig = &#39;@tests/codeception/config/console/unit.php&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;create-test-code:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;Create Test Code&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;テストコードですが今回は &lt;a href=&#34;http://codeception.com/docs/06-UnitTests&#34;&gt;Unit Tests&lt;/a&gt; を作成しました。&lt;br /&gt;
+codeception は &lt;a href=&#34;https://phpunit.de/&#34;&gt;PHPUnit&lt;/a&gt; をベースにしていますので、&lt;br /&gt;
+使った事ある人はすんなり書けるのではないでしょうか？&lt;/p&gt;
+
+&lt;p&gt;サンプル&lt;br /&gt;
+&lt;a href=&#34;https://github.com/yiisoft/yii2-app-advanced/blob/master/tests/codeception/frontend/unit/models/SignupFormTest.php&#34;&gt;SignupFormTest.php&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;test-run:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;Test Run&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;さて、それでは実際にテストを実行させてみましょう！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// 移動
+$ cd tests/codeception/console
+// すべてを実行
+$ codecept run unit
+// クラスを指定したい
+$ codecept run unit models/HogeTest
+// デバッグ出力させたい（-dオプションを指定。テストクラス内でDebug::debugで指定した内容が出力されます。）
+$ codecept run -d unit
+$ codecept run -d unit models/HogeTest
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;code-coverage:fdb10f9b98af8fb73fd69a7e5b191a37&#34;&gt;Code coverage&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;コードカバレッジも出力させることができます。&lt;br /&gt;
+php-pecl-xdebug が必要になるのでインストールしておいてください。&lt;/p&gt;
+
+&lt;p&gt;console/codeception.yml 内の一番下に以下を追記してください。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;coverage:
+    enabled: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;特定の範囲だけのカバレッジを測定したい場合は&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;coverage:
+    enabled: true
+    include:
+    - ../../../console/models/*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;のような書き方も出来ます。&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;coverageオプション指定して実行するのみ！&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ cd tests/codeception/console
+$ codecept run --coverage --coverage-xml --coverage-html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;特にカバレッジの結果ファイルの出力先を指定していなれば&lt;br /&gt;
+console/_outputは配下に結果が出力されます。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wercker on milkpod29.</title>
+    <link>http://blog.milkpod29.me/categories/wercker/</link>
+    <description>Recent content in Wercker on milkpod29.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Apr 2015 01:43:51 +0900</lastBuildDate>
+    <atom:link href="http://blog.milkpod29.me/categories/wercker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>I made a blog in Hugo &#43; Github Pages &#43; wercker.</title>
+      <link>http://blog.milkpod29.me/post/hugo/20150401/</link>
+      <pubDate>Sun, 05 Apr 2015 01:43:51 +0900</pubDate>
+      
+      <guid>http://blog.milkpod29.me/post/hugo/20150401/</guid>
+      <description>
+
+&lt;h2 id=&#34;why-was-i-intend-to-use-the-hugo:c6101761a8fa4ffaae1a04720619752c&#34;&gt;Why was I intend to use the Hugo ?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Blogを作ってみようと思って調べていたところ&lt;br /&gt;
+&lt;a href=&#34;http://golang.org/&#34;&gt;Go言語&lt;/a&gt; で作られてる &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; という&lt;br /&gt;
+サイトジェネレーターと出会いました。&lt;/p&gt;
+
+&lt;p&gt;本当はRubyで出来ている &lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt; を使用しようと&lt;br /&gt;
+思ったのですが以下の記事を拝見してHugoで構築しようと思いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://deeeet.com/writing/2014/12/25/hugo/&#34;&gt;OctopressからHugoへ移行した&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Go言語には、興味があって自分の環境内に構築済みだったというのも１つの理由です。&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-i-hugo-of-preparation:c6101761a8fa4ffaae1a04720619752c&#34;&gt;How do I Hugo of preparation ?&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Hugoの準備は &lt;a href=&#34;http://gohugo.io/overview/installing/&#34;&gt;Installing Hug&lt;/a&gt; に&lt;br /&gt;
+書いてある通りにやれば簡単に準備出来ます。&lt;br /&gt;
+自分はそもそもドキュメントがあるのを知らずに&lt;br /&gt;
+Github の &lt;a href=&#34;https://github.com/spf13/hugo/blob/master/README.md&#34;&gt;README.md&lt;/a&gt; を&lt;br /&gt;
+見ながらやっていたのでちょこちょこハマりました (;^_^A&lt;/p&gt;
+
+&lt;p&gt;Hugo + Github Pages + wercker の組み合わせですが&lt;br /&gt;
+Hugoのドキュメント内にチュートリアルとして&lt;br /&gt;
+記載されています。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gohugo.io/tutorials/automated-deployments/&#34;&gt;Automated deployments with Wercker&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ダラダラ書いていくと見づらくなるので&lt;br /&gt;
+詳しい内容は小出しにしていきます！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

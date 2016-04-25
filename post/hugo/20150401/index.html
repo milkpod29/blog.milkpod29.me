@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>I made a blog in Hugo &#43; Github Pages &#43; wercker. &middot; milkpod29.</title>
+    <meta name="author" content="John Doe">
+    <meta name="description" content="Your description of the blog">
+    <meta name="generator" content="Hugo 0.14" />
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- RSS autodiscovery -->
+    
+
+    <link rel="shortcut icon" href="http://blog.milkpod29.me/img/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="http://blog.milkpod29.me/css/screen.css">
+    <link rel="stylesheet" href="http://blog.milkpod29.me/css/github.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/default.min.css">
+
+    <!-- Stylesheet for theme color -->
+    <style type="text/css">
+    a, a:visited {color: #33cc99;}
+    .pagination a {color: #33cc99;}
+    .gist .gist-file .gist-meta a:visited {color: #33cc99 !important;}
+    a:focus, a:hover {color: #178b6b;}
+    h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {color: #178b6b;}
+    .older-posts:hover, .newer-posts:hover {color: #178b6b;}
+</style>
+</head>
+
+<body class="post-template">
+
+    <header id="site-head">
+	
+	<h1 class="blog-title"><a href="http://blog.milkpod29.me/">Step by step.</a></h1>
+	
+	
+	<h1 class="blog-subtitle">Little and often fills the purse.</h1>
+	
+</header>
+    
+
+    <main class="content" role="main">
+	    <article class="post">
+	        <header>
+	        <h1 class="post-title">I made a blog in Hugo &#43; Github Pages &#43; wercker.</h1>
+	        <div class="post-meta"><time datetime="05 April 2015">05 April 2015</time></div>
+	        </header>
+
+	        <section class="post-content">
+	            
+
+<h2 id="why-was-i-intend-to-use-the-hugo:c6101761a8fa4ffaae1a04720619752c">Why was I intend to use the Hugo ?</h2>
+
+<hr />
+
+<p>Blogを作ってみようと思って調べていたところ<br />
+<a href="http://golang.org/">Go言語</a> で作られてる <a href="http://gohugo.io/">Hugo</a> という<br />
+サイトジェネレーターと出会いました。</p>
+
+<p>本当はRubyで出来ている <a href="http://octopress.org/">Octopress</a> を使用しようと<br />
+思ったのですが以下の記事を拝見してHugoで構築しようと思いました。</p>
+
+<p><a href="http://deeeet.com/writing/2014/12/25/hugo/">OctopressからHugoへ移行した</a></p>
+
+<p>Go言語には、興味があって自分の環境内に構築済みだったというのも１つの理由です。</p>
+
+<h2 id="how-do-i-hugo-of-preparation:c6101761a8fa4ffaae1a04720619752c">How do I Hugo of preparation ?</h2>
+
+<hr />
+
+<p>Hugoの準備は <a href="http://gohugo.io/overview/installing/">Installing Hug</a> に<br />
+書いてある通りにやれば簡単に準備出来ます。<br />
+自分はそもそもドキュメントがあるのを知らずに<br />
+Github の <a href="https://github.com/spf13/hugo/blob/master/README.md">README.md</a> を<br />
+見ながらやっていたのでちょこちょこハマりました (;^_^A</p>
+
+<p>Hugo + Github Pages + wercker の組み合わせですが<br />
+Hugoのドキュメント内にチュートリアルとして<br />
+記載されています。</p>
+
+<p><a href="http://gohugo.io/tutorials/automated-deployments/">Automated deployments with Wercker</a></p>
+
+<p>ダラダラ書いていくと見づらくなるので<br />
+詳しい内容は小出しにしていきます！</p>
+
+	        </section>
+
+	        <section class="post-tags" style="padding-bottom:60px;">
+	            <div class="post-meta tags">
+	            <i class="fa fa-fw fa-tag"></i>
+	            
+	            <a href="http://blog.milkpod29.me/tags/Hugo">Hugo </a>
+	            
+	            <a href="http://blog.milkpod29.me/tags/Github">Github </a>
+	            
+	            <a href="http://blog.milkpod29.me/tags/wercker">wercker </a>
+	            
+	            </div>
+	        </section>
+			
+			
+	        	<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'milkpod29';
+    var disqus_identifier = 'http:\/\/blog.milkpod29.me\/post\/hugo\/20150401\/';
+    var disqus_title = 'I made a blog in Hugo \x2b Github Pages \x2b wercker.';
+    var disqus_url = 'http:\/\/blog.milkpod29.me\/post\/hugo\/20150401\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	        
+			
+			
+
+	        <section class="share">
+	            <p class="backtotop"><a data-scroll href="#site-head"><i class="fa fa-lg fa-fw fa-angle-double-up"></i></a><a data-scroll class="backtotoptext" href="#site-head"> Back to top</a></p>
+	            <p class="info prompt">Share</p>
+	            <a href="http://twitter.com/share?text=I%20made%20a%20blog%20in%20Hugo%20%2b%20Github%20Pages%20%2b%20wercker.&url=http%3a%2f%2fblog.milkpod29.me%2fpost%2fhugo%2f20150401%2f" title="Share on Twitter"
+	                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+	                <i class="fa fa-2x fa-fw fa-twitter-square"></i> <span class="hidden">Twitter</span>
+	            </a>
+	            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fblog.milkpod29.me%2fpost%2fhugo%2f20150401%2f" title="Share on Facebook"
+	                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+	                <i class="fa fa-2x fa-fw fa-facebook-square" style="margin-left: -8px"></i> <span class="hidden">Facebook</span>
+	            </a>
+	            <a href="https://plus.google.com/share?url=http%3a%2f%2fblog.milkpod29.me%2fpost%2fhugo%2f20150401%2f" title="Share on Google+"
+	               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+	                <i class="fa fa-2x fa-fw fa-google-plus-square" style="margin-left: -8px"></i> <span class="hidden">Google+</span>
+	            </a>
+	        </section>
+
+	        <footer class="post-footer">
+	            <section class="author">
+    <div class="authorimage" style="background: url(http://blog.milkpod29.me/img/avatar.jpg)"></div>
+    <h4>John Doe</h4>
+    <p class="bio">I&rsquo;m just a theme. That&rsquo;s it. If you like my design clone <a href="//github.com/digitalcraftsman/hugo-steam-theme">me</a> from Github. Thanks.</p>
+    <p class="meta">
+      
+    </p>
+</section>
+	        </footer>
+	    </article>
+	</main>
+
+    <footer class="site-footer">
+	<div class="inner">
+		<section class="footer-social">
+			
+		    <a href="//twitter.com/milkpod29" target="_blank" title="Twitter"><i class="fa fa-2x fa-fw fa-twitter"></i> <span class="hidden">Twitter</span></a>&nbsp;
+		    
+		    
+		    <a href="//github.com/milkpod29" target="_blank" title="GitHub"><i class="fa fa-2x fa-fw fa-github"></i> <span class="hidden">GitHub</span></a>&nbsp;
+		    
+		    <a href="" target="_blank" title="RSS"><i class="fa fa-2x fa-fw fa-rss"></i> <span class="hidden">RSS</span></a>
+		</section>
+
+		<section class="copyright">&copy; 2016 <a href="http://blog.milkpod29.me/">John Doe</a>. Released under the MIT license.</section>
+	</div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://blog.milkpod29.me/js/index.js"></script>
+<script src="http://blog.milkpod29.me/js/smooth-scroll.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+
+<script>
+    smoothScroll.init({
+        speed: 800,
+        easing: 'easeInOutCubic',
+        updateURL: false,
+        offset: 125,
+    });
+</script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<!-- Google Analytics -->
+<script>
+  var _gaq=[['_setAccount','UA-64572415-1'],['_trackPageview']];
+  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+  s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+
+</body>
+</html>
