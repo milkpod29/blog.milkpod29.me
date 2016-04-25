@@ -24,7 +24,7 @@ paginate = 10
 	# You can choose between green, orange, red and blue.
 	themeColor = "green"
 	# Enable Google Analytics be inserting your tracking code
-	googleAnalytics = ""
+	googleAnalytics = "UA-64572415-1"
 
 	# To provide some metadata for search engines and the about section in the footer
 	# feel free to add a few information about you and your website.
