@@ -8,7 +8,7 @@ theme = "hugo-steam-theme"
 MetaDataFormat = "toml"
 title = "milkpod29."
 author = "Yuichi Saito"
-disqusShortname = "spf13"
+disqusShortname = "milkpod29"
 paginate = 10
 
 [indexes]
@@ -33,8 +33,8 @@ paginate = 10
 	bio = "I'm just a theme. That's it. If you like my design clone [me](//github.com/digitalcraftsman/hugo-steam-theme) from Github. Thanks."
 	description = "Your description of the blog"
 	location = "" # optional
-	twitter = "spf13" # optional
-	github = "spf13" # optional
+	twitter = "milkpod29" # optional
+	github = "milkpod29" # optional
 
 	# Enable a comment system
 	# You can choose between Disqus or Google Plus by setting comments
