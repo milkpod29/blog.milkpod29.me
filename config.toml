@@ -17,8 +17,8 @@ paginate = 10
 
 [params]
 
-	title = "milkpod29"
-	subtitle = "test"
+	title = "Step by step."
+	subtitle = "Little and often fills the purse."
 	copyright = "Released under the MIT license."
 
 	# You can choose between green, orange, red and blue.
