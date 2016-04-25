@@ -1,13 +1,15 @@
-box: wercker/default
+box: debian
 build:
   steps:
     - arjen/hugo-build:
-        version: 0.12
+        version: "0.14"
         theme: hugo-steam-theme
         flags: --buildDrafts=false
 deploy:
   steps:
+    - install-packages:
+        packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-        domain: blog.milkpod29.me
+        domain: hugo-wercker.ig.nore.me
         basedir: public

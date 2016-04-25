@@ -15,7 +15,6 @@ paginate = 10
     category = "categories"
     tag = "tags"
 
-
 [params]
 
 	title = "milkpod29"
